@@ -5,10 +5,12 @@ int main( int argc, char* argv[] )
 	char appIDStr[11];
 	printf( "Enter the AppID: " );
 	scanf( "%10s", appIDStr );
+	getchar(); // skip newline
 
 	SteamItemDef_t dropListDefinition;
 	printf( "Enter the drop list definition: " );
 	scanf( "%d", &dropListDefinition );
+	getchar(); // skip newline
 
 	if ( !SetEnvironmentVariableA( "SteamAppId", appIDStr ) ) {
 		printf( "SetEnvironmentVariableA failed with error code %d\n", GetLastError() );
@@ -16,7 +18,7 @@ int main( int argc, char* argv[] )
 	}
 	
 	if ( !SteamAPI_Init() ) {
-		printf( "SteamAPI_Init failed" );
+		printf( "SteamAPI_Init failed\n" );
 		goto funcEnd;
 	}
 
@@ -33,7 +35,7 @@ int main( int argc, char* argv[] )
 	}
 
 funcEnd:
-	printf( "Press any key to exit...\n" );
+	printf( "Press enter to exit...\n" );
 	getchar();
 	return 0;
 }
