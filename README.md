@@ -10,6 +10,10 @@
 AppID: 232090<br>
 Drop list definition: 900000
 
+* PAYDAY 2<br>
+AppID: 218620<br>
+Drop list definition: 1
+
 * Rust<br>
 AppID: 252490<br>
 Drop list definition: 10
