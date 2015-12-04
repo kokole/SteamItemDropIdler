@@ -9,6 +9,11 @@
 * Killing Floor 2<br>
 AppID: 232090<br>
 Drop list definition: 900000
+
+* Rust<br>
+AppID: 252490<br>
+Drop list definition: 10
+
 * Unturned<br>
 AppID: 304930<br>
 Drop list definition: 10000
