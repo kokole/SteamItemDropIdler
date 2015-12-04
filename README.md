@@ -5,7 +5,7 @@
 4. It should say "Item drop idling is now in progress"
 5. Keep SteamItemDropIdler open and wait till you get items! To stop, just close SteamItemDropIdler
 
-# Parameters for various games:
+# AppIDs and Drop List Definitions:
 * Killing Floor 2<br>
 AppID: 232090<br>
 Drop list definition: 900000
