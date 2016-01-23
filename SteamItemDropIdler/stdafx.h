@@ -1,10 +1,10 @@
 #pragma once
 
-#define _CRT_SECURE_NO_WARNINGS
-
 #include "targetver.h"
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <Windows.h>
 
-#include "SteamSDK\public\steam\steam_api.h"
-#pragma comment( lib, "SteamSDK\\redistributable_bin\\steam_api.lib" )
+#define STEAMWORKS_CLIENT_INTERFACES
+#include "Open Steamworks\Open Steamworks\Steamworks.h"
+#pragma comment( lib, "Open Steamworks\\Resources\\Libs\\Win32\\steamclient.lib" )
