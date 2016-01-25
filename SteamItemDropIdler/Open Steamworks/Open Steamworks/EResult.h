@@ -24,7 +24,7 @@
 // General result codes
 typedef enum EResult
 {
-	k_EResultOK	= 1,										// success
+	k_EResultOK = 1,										// success
 	k_EResultFail = 2,										// generic failure 
 	k_EResultNoConnection = 3,								// no/failed network connection
 	//	k_EResultNoConnectionRetry = 4,						// OBSOLETE - removed
@@ -108,6 +108,17 @@ typedef enum EResult
 	k_EResultRestrictedDevice = 82,							//
 	k_EResultRegionLocked = 83,								//
 	k_EResultRateLimitExceeded = 84,						//
+	k_EResultAccountLogonDeniedNeedTwoFactorCode = 85,
+	k_EResultItemOrEntryHasBeenDeleted = 86,
+	k_EResultTooManyLogonAttempts = 87,
+	k_EResultTwoFactorCodeMismatch = 88,
+	k_EResultTwoFactorActivationCodeMismatch = 89,
+	k_EResultAccountAssociatedWithMultiplePlayers = 90,
+	k_EResultNotModified = 91,
+	k_EResultNoMobileDeviceAvailable = 92,
+	k_EResultTimeIsOutOfSync = 93,
+	k_EResultSMSCodeFailed = 94,
+	k_EResultTooManyAccountsAccessThisResource = 95,
 } EResult;
 
 #endif // ERESULT_H

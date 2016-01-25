@@ -136,7 +136,7 @@ int main( int argc, char* argv[] )
 			case SteamServersConnected_t::k_iCallback:
 				clientFriends->SetPersonaState( k_EPersonaStateOnline );
 
-				if ( (*(bool( __thiscall** )(IClientUser*, AppId_t))(*(DWORD*)clientUser + 688))(clientUser, appID) ) { // BIsSubscribedApp
+				if ( (*(bool( __thiscall** )(IClientUser*, AppId_t))(*(DWORD*)clientUser + 692))(clientUser, appID) ) { // BIsSubscribedApp
 					clientUtils->SetAppIDForCurrentPipe( appID, true );
 					bPlayingGame = true;
 				}
@@ -183,7 +183,20 @@ int main( int argc, char* argv[] )
 					getchar();
 
 					// this is Set2ndFactorAuthCode, however I have to do this because IClientUser.h is outdated
-					(*(void( __thiscall** )(IClientUser*, const char*, bool))(*(DWORD*)clientUser + 672))(clientUser, steamGuardCode, false);
+					(*(void( __thiscall** )(IClientUser*, const char*, bool))(*(DWORD*)clientUser + 676))(clientUser, steamGuardCode, false);
+					clientUser->LogOnWithPassword( false, steamAccountName, steamAccountPassword );
+					break;
+				}
+				case k_EResultTwoFactorCodeMismatch:
+					printf( "Invalid Steam Mobile Authenticator code\n" );
+				case k_EResultAccountLogonDeniedNeedTwoFactorCode:
+				{
+					char steamMobileAuthenticatorCode[33];
+					printf( "Enter the Steam Mobile Authenticator code: " );
+					scanf( "%32s", steamMobileAuthenticatorCode );
+					getchar();
+
+					(*(void( __thiscall** )(IClientUser*, const char*))(*(DWORD*)clientUser + 196))(clientUser, steamMobileAuthenticatorCode); // SetTwoFactorCode
 					clientUser->LogOnWithPassword( false, steamAccountName, steamAccountPassword );
 					break;
 				}

@@ -1,10 +1,11 @@
-SteamItemDropIdler v2.0
+SteamItemDropIdler v2.01
 
 All this info available on: https://github.com/kokole/SteamItemDropIdler/wiki
 
 * Features
 	- Works without Steam
 	- Steam Guard support
+	- Steam Mobile Authenticator support
 	- Multiple instance support
 	- Auto add free game license (for games that you idle only)
 	- Auto reconnect if connection to Steam servers is lost
@@ -16,7 +17,7 @@ All this info available on: https://github.com/kokole/SteamItemDropIdler/wiki
 	- Games that use the Inventory Service Steam API (Killing Floor 2, Rust, Unturned...)
 
 * How to use
-	1. Download and extract the release to some folder from here if you have not already: https://github.com/kokole/SteamItemDropIdler/releases/download/v2.0/SteamItemDropIdler.zip
+	1. Download and extract the release to some folder from here if you have not already: https://github.com/kokole/SteamItemDropIdler/releases/download/v2.01/SteamItemDropIdler.zip
 	2. Make sure Steam is not running. SteamItemDropIdler may not work properly without this step
 	3. If you have Steam installed, rename your Steam folder to something else. For example, if your Steam installation is in "C:\Program Files (x86)\Steam", rename it to "C:\Program Files (x86)\Steam123". SteamItemDropIdler may not work properly without this step
 	4. Run SteamItemDropIdler
